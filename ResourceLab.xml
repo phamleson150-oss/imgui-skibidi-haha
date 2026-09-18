@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ResourceLab</name>
+    </assembly>
+    <members>
+        <member name="T:ResourceLab.Exceptions.ResourceLabException">
+            <summary>
+            Exception class of resource management errors
+            </summary>
+        </member>
+        <member name="M:ResourceLab.Exceptions.ResourceLabException.#ctor">
+            <summary>
+            Creates a new instance of this exception
+            </summary>
+        </member>
+        <member name="M:ResourceLab.Exceptions.ResourceLabException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of this exception
+            </summary>
+            <param name="message">Message to describe the exception</param>
+        </member>
+        <member name="M:ResourceLab.Exceptions.ResourceLabException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of this exception
+            </summary>
+            <param name="message">Message to describe the exception</param>
+            <param name="innerException">Inner exception to use</param>
+        </member>
+        <member name="T:ResourceLab.Management.ResourcesManager">
+            <summary>
+            Manages the resources
+            </summary>
+        </member>
+        <member name="P:ResourceLab.Management.ResourcesManager.ResourceManagers">
+            <summary>
+            A list of resource managers
+            </summary>
+        </member>
+        <member name="M:ResourceLab.Management.ResourcesManager.AddResourceManager(System.String,System.Resources.ResourceManager)">
+            <summary>
+            Adds a resource manager to the list of resources
+            </summary>
+            <param name="name">Tag name of the resource manager to track</param>
+            <param name="resourceManager">Resource manager to track</param>
+            <exception cref="T:ResourceLab.Exceptions.ResourceLabException">If resource already exists or doesn't exist in the resource manager</exception>
+        </member>
+        <member name="M:ResourceLab.Management.ResourcesManager.EditResourceManager(System.String,System.Resources.ResourceManager)">
+            <summary>
+            Edits a resource manager in the list of resources
+            </summary>
+            <param name="name">Tag name of the resource manager to track</param>
+            <param name="resourceManager">Resource manager to replace with</param>
+            <exception cref="T:ResourceLab.Exceptions.ResourceLabException">If resource already exists or doesn't exist in the resource manager</exception>
+        </member>
+        <member name="M:ResourceLab.Management.ResourcesManager.RemoveResourceManager(System.String)">
+            <summary>
+            Removes a resource manager from the list of resources
+            </summary>
+            <param name="name">Tag name of the resource manager to remove</param>
+            <exception cref="T:ResourceLab.Exceptions.ResourceLabException">If resource doesn't exist</exception>
+        </member>
+        <member name="M:ResourceLab.Management.ResourcesManager.GetResourceManager(System.String)">
+            <summary>
+            Gets the resource manager
+            </summary>
+            <param name="name">Tag name of the resource manager to track</param>
+            <returns>Output resource manager</returns>
+        </member>
+        <member name="M:ResourceLab.Management.ResourcesManager.TryGetResourceManager(System.String,System.Resources.ResourceManager@)">
+            <summary>
+            Tries to get the resource manager
+            </summary>
+            <param name="name">Tag name of the resource manager to track</param>
+            <param name="resourceManager">Output resource manager</param>
+            <returns>True if it exists; false otherwise</returns>
+        </member>
+        <member name="M:ResourceLab.Management.ResourcesManager.ResourceManagerExists(System.String)">
+            <summary>
+            Checks to see if a resource manager exists
+            </summary>
+            <param name="name">Tag name of the resource manager to track</param>
+            <returns>True if it exists; false otherwise</returns>
+        </member>
+    </members>
+</doc>

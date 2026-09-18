@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpecProbe.Software</name>
+    </assembly>
+    <members>
+        <member name="T:SpecProbe.Software.Kernel.UnameTypes">
+            <summary>
+            The uname types
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Kernel.UnameTypes.KernelName">
+            <summary>
+            The kernel name
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Kernel.UnameTypes.NetworkNode">
+            <summary>
+            The network node host name (usually a hostname)
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Kernel.UnameTypes.KernelRelease">
+            <summary>
+            Kernel release version
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Kernel.UnameTypes.KernelVersion">
+            <summary>
+            Kernel release extended version
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Kernel.UnameTypes.Machine">
+            <summary>
+            Machine type
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Kernel.UnameTypes.OperatingSystem">
+            <summary>
+            Operating system type
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Kernel.UnameTypes.All">
+            <summary>
+            All! same as "uname -a"
+            </summary>
+        </member>
+        <member name="T:SpecProbe.Software.Kernel.UnameManager">
+            <summary>
+            Kernel information probing manager
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Kernel.UnameManager.GetUname(SpecProbe.Software.Kernel.UnameTypes)">
+            <summary>
+            Gets details from the uname process
+            </summary>
+            <param name="unameTypes">All the uname types the high-level APIs passed</param>
+            <returns>Uname string output</returns>
+        </member>
+        <member name="T:SpecProbe.Software.Platform.Platform">
+            <summary>
+            Platform (operating system).
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Platform.Platform.Windows">
+            <summary>
+            Windows platform.
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Platform.Platform.Linux">
+            <summary>
+            Linux platform.
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Platform.Platform.MacOS">
+            <summary>
+            MacOS platform.
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Platform.Platform.FreeBSD">
+            <summary>
+            FreeBSD platform.
+            </summary>
+        </member>
+        <member name="F:SpecProbe.Software.Platform.Platform.Unknown">
+            <summary>
+            Unknown platform
+            </summary>
+        </member>
+        <member name="T:SpecProbe.Software.Platform.PlatformHelper">
+            <summary>
+            Platform helper
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnWindows">
+            <summary>
+            Is this system a Windows system?
+            </summary>
+            <returns>True if running on Windows (Windows 10, Windows 11, etc.). Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnWindowsOrWsl">
+            <summary>
+            Is this system a Windows system or a WSL system?
+            </summary>
+            <returns>True if running on Windows (Windows 10, Windows 11, etc.) or running on WSL. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnUnix">
+            <summary>
+            Is this system a Unix system? True for macOS, too!
+            </summary>
+            <returns>True if running on Unix (Linux, *nix, etc.). Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnMacOS">
+            <summary>
+            Is this system a macOS system?
+            </summary>
+            <returns>True if running on macOS (MacBook, iMac, etc.). Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnFreeBSD">
+            <summary>
+            Is this system a FreeBSD system?
+            </summary>
+            <returns>True if running on FreeBSD. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnAndroid">
+            <summary>
+            Is this system an Android system?
+            </summary>
+            <returns>True if running on Android phones using Termux. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnArmOrArm64">
+            <summary>
+            Is this system an ARM or ARM64 system?
+            </summary>
+            <returns>True if running on ARM or ARM64 systems. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnX86OrAmd64">
+            <summary>
+            Is this system an x86 or AMD64 system?
+            </summary>
+            <returns>True if running on x86 or AMD64 systems. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnArm">
+            <summary>
+            Is this system an ARM system?
+            </summary>
+            <returns>True if running on ARM systems. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnArm64">
+            <summary>
+            Is this system an ARM64 system?
+            </summary>
+            <returns>True if running on ARM64 systems. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnAmd64">
+            <summary>
+            Is this system an AMD64 system?
+            </summary>
+            <returns>True if running on AMD64 systems. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnX86">
+            <summary>
+            Is this system an x86 system?
+            </summary>
+            <returns>True if running on x86 systems. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnUnixMusl">
+            <summary>
+            Is this system a Unix system that contains musl libc?
+            </summary>
+            <returns>True if running on Unix systems that use musl libc. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnUnixWsl">
+            <summary>
+            Is this system a Unix system that is from WSL (Windows Subsystem for Linux)?
+            </summary>
+            <returns>True if running on WSL. Otherwise, false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetTerminalEmulator">
+            <summary>
+            Polls $TERM_PROGRAM to get terminal emulator
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetTerminalType">
+            <summary>
+            Polls $TERM to get terminal type (vt100, dumb, ...)
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsRunningFromGrilo">
+            <summary>
+            Is this application running from GRILO?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsRunningFromNitrocid">
+            <summary>
+            Is this application running from Nitrocid KS bootloader?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsRunningFromTmux">
+            <summary>
+            Is this application running from TMUX?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsRunningFromScreen">
+            <summary>
+            Is this application running from GNU Screen?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsRunningFromMono">
+            <summary>
+            Is this application running from Mono?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetCurrentGenericRid(System.Boolean)">
+            <summary>
+            Gets the current runtime identifier
+            </summary>
+            <param name="includeMusl">Whether to detect MUSL libc</param>
+            <returns>Returns a runtime identifier (win-x64 for example).</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetPlatform">
+            <summary>
+            Gets the platform enumeration from the current platform
+            </summary>
+            <returns>Platform enumeration from the current platform</returns>
+            <exception cref="T:System.PlatformNotSupportedException"></exception>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetArchitecture">
+            <summary>
+            Gets the architecture
+            </summary>
+            <returns>The current architecture</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsDotNetFx">
+            <summary>
+            Checks to see if the program is running under .NET Framework
+            </summary>
+            <returns>True if running under .NET Framework; False if otherwise.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnX11">
+            <summary>
+            Is this application running on X11?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnWayland">
+            <summary>
+            Is this application running on Wayland?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.IsOnGui">
+            <summary>
+            Is this application running in the GUI?
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetPaths">
+            <summary>
+            Gets a list of PATH directories
+            </summary>
+            <returns>A list of directories specified by the PATH environment variable</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetPossiblePaths(System.String)">
+            <summary>
+            Gets the possible paths that this file is found on
+            </summary>
+            <param name="file">Target file name with extension</param>
+            <returns>Possible list of paths</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetPossiblePaths(System.String,System.String[])">
+            <summary>
+            Gets the possible paths that this file is found on
+            </summary>
+            <param name="file">Target file name with extension</param>
+            <param name="lookupPaths">Lookup paths with a directory path for each item</param>
+            <returns>Possible list of paths</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.TryParseFileName(System.String)">
+            <summary>
+            Tries to parse the file name
+            </summary>
+            <param name="name">File name to parse</param>
+            <returns>True if valid; else false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.TryParsePath(System.String)">
+            <summary>
+            Tries to parse the path
+            </summary>
+            <param name="path">Path to parse</param>
+            <returns>True if valid; else false.</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.GetInvalidPathChars">
+            <summary>
+            Gets the invalid path chars, taking some of Windows' invalid path characters into account
+            </summary>
+            <returns>A list of invalid path characters</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.PlatformOpen(System.String)">
+            <summary>
+            Opens a URL or a file using xdg-open in Linux or its equivalent in other operating systems
+            </summary>
+            <param name="path">Path to open using the OS</param>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.PlatformHelper.ExecuteProcessToString(System.String,System.String)">
+            <summary>
+            Executes a file with specified arguments and puts the output to the string
+            </summary>
+            <param name="file">Full path to file</param>
+            <param name="args">Arguments, if any</param>
+            <returns>Output of a command from stdout</returns>
+        </member>
+        <member name="T:SpecProbe.Software.Platform.RidGraphReader">
+            <summary>
+            Tools for reading the RID graph
+            </summary>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.RidGraphReader.GetGraphFromRid">
+            <summary>
+            Gets the graph from the current RID
+            </summary>
+            <returns>List of RIDs from the current RID to the base RID</returns>
+        </member>
+        <member name="M:SpecProbe.Software.Platform.RidGraphReader.GetGraphFromRid(System.String)">
+            <summary>
+            Gets the graph from the specified RID
+            </summary>
+            <returns>List of RIDs from the specified RID to the base RID</returns>
+        </member>
+    </members>
+</doc>

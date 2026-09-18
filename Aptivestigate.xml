@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aptivestigate</name>
+    </assembly>
+    <members>
+        <member name="T:Aptivestigate.CrashHandler.CrashTools">
+            <summary>
+            Application crash handling tools
+            </summary>
+        </member>
+        <member name="P:Aptivestigate.CrashHandler.CrashTools.CrashHandling">
+            <summary>
+            Whether the crash handler is installed or not
+            </summary>
+        </member>
+        <member name="M:Aptivestigate.CrashHandler.CrashTools.InstallCrashHandler(System.Action{System.UnhandledExceptionEventArgs})">
+            <summary>
+            Installs the application crash handler
+            </summary>
+            <param name="crashHandler">Crash handler to use</param>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:Aptivestigate.Logging.BaseLogger">
+            <summary>
+            Abstract base logger class
+            </summary>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Debug(System.String,System.Object[])">
+            <summary>
+            Adds a message to the debug log
+            </summary>
+            <param name="message">Message to be added to the debug log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Debug(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the debug log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the debug log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Info(System.String,System.Object[])">
+            <summary>
+            Adds a message to the info log
+            </summary>
+            <param name="message">Message to be added to the info log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Info(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the info log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the info log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Warning(System.String,System.Object[])">
+            <summary>
+            Adds a message to the warning log
+            </summary>
+            <param name="message">Message to be added to the warning log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Warning(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the warning log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the warning log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Error(System.String,System.Object[])">
+            <summary>
+            Adds a message to the error log
+            </summary>
+            <param name="message">Message to be added to the error log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Error(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the error log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the error log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Fatal(System.String,System.Object[])">
+            <summary>
+            Adds a message to the fatal log
+            </summary>
+            <param name="message">Message to be added to the fatal log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.BaseLogger.Fatal(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the fatal log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the fatal log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="T:Aptivestigate.Logging.LogTools">
+            <summary>
+            Logging tools
+            </summary>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Debug(Aptivestigate.Logging.BaseLogger,System.String,System.Object[])">
+            <summary>
+            Adds a message to the debug log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="message">Message to be added to the debug log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Debug(Aptivestigate.Logging.BaseLogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the debug log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the debug log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Error(Aptivestigate.Logging.BaseLogger,System.String,System.Object[])">
+            <summary>
+            Adds a message to the error log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="message">Message to be added to the error log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Error(Aptivestigate.Logging.BaseLogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the error log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the error log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Fatal(Aptivestigate.Logging.BaseLogger,System.String,System.Object[])">
+            <summary>
+            Adds a message to the fatal log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="message">Message to be added to the fatal log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Fatal(Aptivestigate.Logging.BaseLogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the fatal log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the fatal log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Info(Aptivestigate.Logging.BaseLogger,System.String,System.Object[])">
+            <summary>
+            Adds a message to the info log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="message">Message to be added to the info log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Info(Aptivestigate.Logging.BaseLogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the info log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the info log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Warning(Aptivestigate.Logging.BaseLogger,System.String,System.Object[])">
+            <summary>
+            Adds a message to the warning log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="message">Message to be added to the warning log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.Warning(Aptivestigate.Logging.BaseLogger,System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the warning log
+            </summary>
+            <param name="log">Base logger to use</param>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the warning log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Logging.LogTools.GenerateLogFilePath(System.Guid@)">
+            <summary>
+            Generates the log file path
+            </summary>
+            <param name="logId">[<see langword="out"/>] Output parameter for generated logging ID</param>
+            <returns>Full path to the log file</returns>
+        </member>
+        <member name="T:Aptivestigate.Paths.LogPath">
+            <summary>
+            Log path enumeration
+            </summary>
+        </member>
+        <member name="F:Aptivestigate.Paths.LogPath.Logs">
+            <summary>
+            Log directory
+            </summary>
+        </member>
+        <member name="F:Aptivestigate.Paths.LogPath.Crashes">
+            <summary>
+            Application crash directory
+            </summary>
+        </member>
+        <member name="T:Aptivestigate.Paths.LogPathTools">
+            <summary>
+            Log path tools
+            </summary>
+        </member>
+        <member name="M:Aptivestigate.Paths.LogPathTools.GetPath(Aptivestigate.Paths.LogPath)">
+            <summary>
+            Gets the logs directory according to a specified type
+            </summary>
+            <param name="path">Log path type</param>
+            <returns>A path that points to the application log directory, depending on the <see cref="T:Aptivestigate.Paths.LogPath"/></returns>
+        </member>
+        <member name="M:Aptivestigate.Paths.LogPathTools.GetLogFiles(Aptivestigate.Paths.LogPath,System.Reflection.Assembly)">
+            <summary>
+            Gets the log files that were generated by a specified assembly
+            </summary>
+            <param name="path">Log path</param>
+            <param name="assembly">Assembly</param>
+            <returns>An array of log file paths</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Aptivestigate.Paths.LogPathTools.GetLogFiles(Aptivestigate.Paths.LogPath,System.String)">
+            <summary>
+            Gets the log files that were generated by a specified assembly
+            </summary>
+            <param name="path">Log path</param>
+            <param name="assemblyName">Assembly name</param>
+            <returns>An array of log file paths</returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+    </members>
+</doc>

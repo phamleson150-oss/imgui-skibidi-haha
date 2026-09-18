@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Aptivestigate.Microsoft</name>
+    </assembly>
+    <members>
+        <member name="T:Aptivestigate.Microsoft.MsLogger">
+            <summary>
+            Inherited logger class for Microsoft.Extensions.Logging
+            </summary>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Debug(System.String,System.Object[])">
+            <summary>
+            Adds a message to the debug log
+            </summary>
+            <param name="message">Message to be added to the debug log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Debug(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the debug log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the debug log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Error(System.String,System.Object[])">
+            <summary>
+            Adds a message to the error log
+            </summary>
+            <param name="message">Message to be added to the error log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Error(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the error log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the error log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Fatal(System.String,System.Object[])">
+            <summary>
+            Adds a message to the fatal log
+            </summary>
+            <param name="message">Message to be added to the fatal log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Fatal(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the fatal log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the fatal log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Info(System.String,System.Object[])">
+            <summary>
+            Adds a message to the info log
+            </summary>
+            <param name="message">Message to be added to the info log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Info(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the info log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the info log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Warning(System.String,System.Object[])">
+            <summary>
+            Adds a message to the warning log
+            </summary>
+            <param name="message">Message to be added to the warning log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.Warning(System.Exception,System.String,System.Object[])">
+            <summary>
+            Adds a message to the warning log
+            </summary>
+            <param name="ex">Exception data</param>
+            <param name="message">Message to be added to the warning log</param>
+            <param name="args">Arguments to format</param>
+        </member>
+        <member name="M:Aptivestigate.Microsoft.MsLogger.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Makes a new logger instance
+            </summary>
+            <param name="name">Context to log with</param>
+            <param name="configurator">Configuration instance that configures NLog</param>
+        </member>
+    </members>
+</doc>
